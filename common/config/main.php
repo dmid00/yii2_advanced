@@ -10,4 +10,13 @@ return [
             'class' => \yii\caching\FileCache::class,
         ],
     ],
+    'modules' => [
+        'rbac' => [
+            'class' => \dektrium\rbac\RbacWebModule::class,
+        ],
+        'user' => [
+            'class' => dektrium\user\Module::class,
+            'admins' => ['admin'],
+        ],
+    ],
 ];

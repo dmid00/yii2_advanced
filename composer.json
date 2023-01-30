@@ -17,7 +17,12 @@
         "php": ">=7.4.0",
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",
-        "yiisoft/yii2-symfonymailer": "~2.0.3"
+        "yiisoft/yii2-symfonymailer": "~2.0.3",
+        "dektrium/yii2-user": "0.9.x-dev",
+        "dektrium/yii2-rbac": "1.0.0-alpha@dev",
+        "hail812/yii2-adminlte3": "~1.1",
+        "kartik-v/yii2-widgets": "dev-master",
+        "dvizh/yii2-seo": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
