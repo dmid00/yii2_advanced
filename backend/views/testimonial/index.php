@@ -10,18 +10,12 @@ use yii\grid\GridView;
 /** @var backend\models\TestimonialSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Testimonials';
+$this->title = 'Добавление/Изменение отзывов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="testimonial-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create Testimonial', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <p><?= Html::a('Создать новый отзыв', ['create'], ['class' => 'btn btn-success']) ?></p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -29,12 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'img',
             'name',
             'title',
-            'description:ntext',
-            //'status',
+            'status',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Testimonial $model, $key, $index, $column) {

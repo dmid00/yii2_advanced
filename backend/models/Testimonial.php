@@ -43,11 +43,11 @@ class Testimonial extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'img' => 'Img',
-            'name' => 'Name',
-            'title' => 'Title',
-            'description' => 'Description',
-            'status' => 'Status',
+            'img' => 'Путь к файлу изображения',
+            'name' => 'Покупатель',
+            'title' => 'Заголовок',
+            'description' => 'Описание',
+            'status' => 'Первый в карусели (1/0)',
         ];
     }
 }

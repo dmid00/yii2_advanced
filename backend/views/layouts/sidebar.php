@@ -1,5 +1,6 @@
 <?php
 
+use hail812\adminlte\widgets\Menu;
 use yii\helpers\Html;
 
 ?>
@@ -13,23 +14,22 @@ use yii\helpers\Html;
         <nav class="mt-2">
             <?php
             if (Yii::$app->user->isGuest==null) {
-                echo \hail812\adminlte\widgets\Menu::widget([
+                echo Menu::widget([
                     'items' => [
-                        ['label' => 'MENU', 'header' => true],
-                        ['label' => 'NavBar', 'iconStyle' => 'far', 'url' => ['/navbar']],
-                        ['label' => 'About', 'iconStyle' => 'far', 'url' => ['/about']],
-                        ['label' => 'Testimonial', 'iconStyle' => 'far', 'url' => ['/testimonial']],
-                        ['label' => 'Ourfruit', 'iconStyle' => 'far', 'url' => ['/ourfruit']],
-                        ['label' => 'Setting', 'iconStyle' => 'far', 'url' => ['/upsetting']],
-                        ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
-                        ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
+                        ['label' => 'Структура сайта', 'header' => true],
+                        ['label' => 'Панель Навигации', 'iconStyle' => 'far', 'url' => ['/navbar']],
+                        ['label' => 'Информация о компании', 'iconStyle' => 'far', 'url' => ['/about']],
+                        ['label' => 'Добавление/Изменение отзывов', 'iconStyle' => 'far', 'url' => ['/testimonial']],
+                        ['label' => 'Добавление/Изменение товара', 'iconStyle' => 'far', 'url' => ['/ourfruit']],
+                        ['label' => 'Настройки', 'iconStyle' => 'far', 'url' => ['/upsetting']],
+                        ['label' => 'Отладка ошибок', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
                     ],
                 ]);
-                echo Html::a('Sign out', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']);
+                echo Html::a('Выйти', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']);
             }
-            else echo \hail812\adminlte\widgets\Menu::widget([
+            else echo Menu::widget([
                 'items' => [
-                ['label' => 'Login', 'url' => ['/user/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
+                ['label' => 'Войти', 'url' => ['/user/login'], 'icon' => 'sign-in-alt'],
               ],
             ]);
 

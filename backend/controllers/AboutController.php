@@ -4,9 +4,13 @@ namespace backend\controllers;
 
 use app\models\About;
 use backend\models\AboutSearch;
+use common\models\LoginForm;
+use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
 /**
  * AboutController implements the CRUD actions for About model.
@@ -21,6 +25,20 @@ class AboutController extends Controller
         return array_merge(
             parent::behaviors(),
             [
+                'access' => [
+                    'class' => AccessControl::class,
+                    'rules' => [
+                        [
+                            'actions' => ['login', 'error'],
+                            'allow' => true,
+                        ],
+                        [
+                            'actions' => ['logout', 'index', 'update', 'create'],
+                            'allow' => true,
+                            'roles' => ['@'],
+                        ],
+                    ],
+                ],
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
@@ -131,4 +149,6 @@ class AboutController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
 }

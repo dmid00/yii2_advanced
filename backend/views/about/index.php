@@ -10,37 +10,15 @@ use yii\grid\GridView;
 /** @var backend\models\AboutSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Abouts';
+$this->title = 'Информация о компании';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="about-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create About', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'img',
-            'tittle',
-            'description:ntext',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, About $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
-        ],
-    ]); ?>
-
-
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h3>Вы действительно хотите изменить информацию о компании? Создайте раздел, если он не отображается</h3>
+            <?= Html::a('Редактировать информацию сайта', ['update', 'id' => 1], ['class' => 'btn btn-warning']) ?>
+            <?= Html::a('Создать раздел', ['create'], ['class' => 'btn btn-success']) ?>
+        </div>
+    </div>
 </div>

@@ -38,8 +38,8 @@ class Navbar extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'url' => 'Url',
+            'name' => 'Название раздела',
+            'url' => 'URL страницы',
         ];
     }
 }

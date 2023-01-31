@@ -39,8 +39,8 @@ class Ourfruit extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'img' => 'Img',
-            'name' => 'Name',
+            'img' => 'Путь к файлу изображения',
+            'name' => 'Название товара',
         ];
     }
 }

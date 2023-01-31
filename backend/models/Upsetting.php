@@ -49,18 +49,18 @@ class Upsetting extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'namesite' => 'Namesite',
-            'email' => 'Email',
-            'location' => 'Location',
-            'phone' => 'Phone',
-            'sendEmail' => 'Send Email',
-            'sendPassEmail' => 'Send Pass Email',
-            'locationUrl' => 'Location Url',
-            'selection1' => 'Selection1',
-            'selection2' => 'Selection2',
-            'selection3' => 'Selection3',
-            'selection4' => 'Selection4',
-            'selection5' => 'Selection5',
+            'namesite' => 'Название сайта',
+            'email' => 'Email технической поддержки',
+            'location' => 'Страна/Город/Улица/Дом',
+            'phone' => 'Номер телефона',
+            'sendEmail' => 'Обратная связь',
+            'sendPassEmail' => '*Пароль обратной связи*',
+            'locationUrl' => 'URL расположения',
+            'selection1' => 'Название элемента №1',
+            'selection2' => 'Название элемента №2',
+            'selection3' => 'Название элемента №3',
+            'selection4' => 'Название элемента №4',
+            'selection5' => 'Название элемента №5',
         ];
     }
 }

@@ -41,9 +41,9 @@ class About extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'img' => 'Img',
-            'tittle' => 'Tittle',
-            'description' => 'Description',
+            'img' => 'Путь к файлу изображения',
+            'tittle' => 'Заголовок',
+            'description' => 'Описание',
         ];
     }
 }
