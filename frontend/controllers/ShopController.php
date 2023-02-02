@@ -2,12 +2,12 @@
 
 namespace frontend\controllers;
 
-use frontend\models\About;
-use frontend\models\FeedbackForm;
-use frontend\models\Navbar;
-use frontend\models\Ourfruit;
-use frontend\models\Setting;
-use frontend\models\Testimonial;
+use common\models\About;
+use common\models\FeedbackForm;
+use common\models\Navbar;
+use common\models\Ourfruit;
+use common\models\Testimonial;
+use common\models\Upsetting;
 use Yii;
 use yii\web\Controller;
 class ShopController extends Controller
@@ -18,7 +18,7 @@ class ShopController extends Controller
              $this->refresh();
         }
         $navbars = Navbar::find()->all();
-        $settings = Setting::find()->one();
+        $settings = Upsetting::find()->one();
         $abouts = About::find()->all();
         $fruits = Ourfruit::find()->all();
         $testimonialtittle = Testimonial::find()->where(['status' => 1])->all();

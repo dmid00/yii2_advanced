@@ -2,9 +2,9 @@
 
 namespace backend\models;
 
+use common\models\Navbar;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Navbar;
 
 /**
  * NavbarSearch represents the model behind the search form of `app\models\Navbar`.

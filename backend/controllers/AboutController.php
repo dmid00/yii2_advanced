@@ -2,15 +2,12 @@
 
 namespace backend\controllers;
 
-use app\models\About;
 use backend\models\AboutSearch;
-use common\models\LoginForm;
-use Yii;
+use common\models\About;
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\web\Response;
 
 /**
  * AboutController implements the CRUD actions for About model.

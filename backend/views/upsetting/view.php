@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\models\Upsetting $model */
+/** @var \common\models\Upsetting $model */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Upsettings', 'url' => ['index']];

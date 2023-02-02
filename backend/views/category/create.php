@@ -1,9 +1,7 @@
 <?php
 
-use yii\helpers\Html;
-
 /** @var yii\web\View $this */
-/** @var app\models\Navbar $model */
+/** @var \common\models\Category $model */
 
 $this->title = 'Создать раздел';
 $this->params['breadcrumbs'][] = ['label' => 'Navbars', 'url' => ['index']];

@@ -2,9 +2,9 @@
 
 namespace backend\models;
 
+use common\models\Testimonial;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Testimonial;
 
 /**
  * TestimonialSearch represents the model behind the search form of `app\models\Testimonial`.

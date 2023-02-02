@@ -2,9 +2,9 @@
 
 namespace backend\models;
 
+use common\models\About;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\About;
 
 /**
  * AboutSearch represents the model behind the search form of `app\models\About`.

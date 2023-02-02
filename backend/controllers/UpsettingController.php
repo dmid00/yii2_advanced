@@ -2,12 +2,12 @@
 
 namespace backend\controllers;
 
-use app\models\Upsetting;
 use backend\models\UpsettingSeatch;
+use common\models\Upsetting;
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * UpsettingController implements the CRUD actions for upsetting model.

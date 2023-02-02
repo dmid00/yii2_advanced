@@ -1,9 +1,7 @@
 <?php
 
-use yii\helpers\Html;
-
 /** @var yii\web\View $this */
-/** @var app\models\Ourfruit $model */
+/** @var \common\models\Ourfruit $model */
 
 $this->title = 'Изменить товар: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Ourfruits', 'url' => ['index']];

@@ -2,12 +2,12 @@
 
 namespace backend\controllers;
 
-use app\models\Testimonial;
 use backend\models\TestimonialSearch;
+use common\models\Testimonial;
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * TestimonialController implements the CRUD actions for Testimonial model.

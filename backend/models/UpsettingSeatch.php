@@ -2,9 +2,9 @@
 
 namespace backend\models;
 
+use common\models\Upsetting;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Upsetting;
 
 /**
  * UpsettingSeatch represents the model behind the search form of `app\models\upsetting`.

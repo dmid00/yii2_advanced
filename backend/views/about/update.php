@@ -1,7 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var app\models\About $model */
+/** @var \common\models\About $model */
 
 $this->title = 'Изменить информацию о компании';
 $this->params['breadcrumbs'][] = ['label' => 'Abouts', 'url' => ['index']];

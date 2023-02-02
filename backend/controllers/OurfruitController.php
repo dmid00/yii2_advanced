@@ -2,12 +2,12 @@
 
 namespace backend\controllers;
 
-use app\models\Ourfruit;
 use backend\models\OurfruitSearch;
+use common\models\Ourfruit;
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * OurfruitController implements the CRUD actions for Ourfruit model.

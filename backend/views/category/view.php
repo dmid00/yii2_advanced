@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\models\Navbar $model */
+/** @var \common\models\Category $model */
 
 $this->title = 'Раздел ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Navbars', 'url' => ['index']];

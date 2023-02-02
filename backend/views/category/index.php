@@ -1,13 +1,13 @@
 <?php
 
-use app\models\Navbar;
-use yii\helpers\Html;
-use yii\helpers\Url;
+use common\models\Category;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\Url;
 
 /** @var yii\web\View $this */
-/** @var backend\models\NavbarSearch $searchModel */
+/** @var backend\models\CategorySearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Панель навигации';
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             [
                 'class' => ActionColumn::class,
-                'urlCreator' => function ($action, Navbar $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Category $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],
