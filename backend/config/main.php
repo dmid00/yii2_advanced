@@ -11,12 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [
-        'user' => [
-            'class' => dektrium\user\Module::class,
-        ],
-        'rbac' => dektrium\rbac\RbacWebModule::class,
-    ],
+    'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
@@ -46,13 +41,6 @@ return [
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
-        /*'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/hail812/yii2-adminlte3/src/views'
-                ],
-            ],
-        ],*/
     ],
     'params' => $params,
 ];

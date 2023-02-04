@@ -1552,7 +1552,7 @@
     DATA_TOGGLE: '[data-toggle="dropdown"]',
     FORM_CHILD: '.dropdown form',
     MENU: '.dropdown-menu',
-    NAVBAR_NAV: '.navbar-nav',
+    NAVBAR_NAV: '.category-nav',
     VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
   };
   var AttachmentMap = {
@@ -1626,7 +1626,7 @@
 
         if (showEvent.isDefaultPrevented()) {
           return;
-        } // Disable totally Popper.js for Dropdown in Navbar
+        } // Disable totally Popper.js for Dropdown in Category
 
 
         if (!this._inNavbar) {
@@ -1793,7 +1793,7 @@
       };
 
       _proto._detectNavbar = function _detectNavbar() {
-        return $(this._element).closest('.navbar').length > 0;
+        return $(this._element).closest('.category').length > 0;
       };
 
       _proto._getOffset = function _getOffset() {

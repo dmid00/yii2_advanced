@@ -43,11 +43,5 @@ return [
             ],
         ],
     ],
-    'modules' => [
-        'user' => [
-            'class' => 'dektrium\user\Module',
-        ],
-        'rbac' => 'dektrium\rbac\RbacWebModule',
-    ],
     'params' => $params,
 ];

@@ -1,11 +1,11 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var frontend\models\Setting $settings */
+/** @var common\models\Upsetting $settings */
 /** @var FeedbackForm $model */
 /** @var yii\bootstrap5\ActiveForm $form */
 
-use frontend\models\FeedbackForm;
+use common\models\FeedbackForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap5\ActiveForm;
@@ -24,7 +24,7 @@ $this->title = $settings->namesite;
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex  flex-column flex-lg-row align-items-center">
                         <ul class="navbar-nav  ">
-                            <?php /** @var frontend\models\Navbar $navbars */
+                            <?php /** @var common\models\Category $navbars */
                             foreach ($navbars as $navbar): ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= $navbar->url ?>"><?= $navbar->name ?></a>
@@ -50,7 +50,7 @@ $this->title = $settings->namesite;
 <section class="about_section">
     <div class="container-fluid">
         <div class="row">
-            <?php /** @var frontend\models\About $abouts */
+            <?php /** @var common\models\About $abouts */
             foreach ($abouts as $about): ?>
                 <div class="col-md-6 px-0">
                     <div class="img-box">
@@ -81,7 +81,7 @@ $this->title = $settings->namesite;
     <div class="container-fluid">
 
         <div class="fruit_container">
-            <?php /** @var frontend\models\Ourfruit $fruits */
+            <?php /** @var common\models\Ourfruit $fruits */
             foreach ($fruits as $fruit): ?>
                 <div class="box">
                     <?= Html::img("@web/$fruit->img") ?>
@@ -106,7 +106,7 @@ $this->title = $settings->namesite;
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="client_container layout_padding-top">
-                        <?php /** @var frontend\models\Testimonial $testimonialtittle */
+                        <?php /** @var common\models\Testimonial $testimonialtittle */
                         foreach ($testimonialtittle as $monialstitle): ?>
                             <div class="img-box">
                                 <?= Html::img("@web/$monialstitle->img") ?>
@@ -123,7 +123,7 @@ $this->title = $settings->namesite;
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <?php /** @var frontend\models\Testimonial $testimonials */
+                <?php /** @var common\models\Testimonial $testimonials */
                 foreach ($testimonials as $monials): ?>
                     <div class="carousel-item">
                         <div class="client_container layout_padding-top">
@@ -198,13 +198,6 @@ $this->title = $settings->namesite;
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
 <section class="info_section layout_padding">
     <div class="container">
         <div class="info_logo">

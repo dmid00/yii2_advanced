@@ -2,14 +2,14 @@
 
 namespace backend\models;
 
-use common\models\Navbar;
+use common\models\Category;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * NavbarSearch represents the model behind the search form of `app\models\Navbar`.
+ * CategorySearch represents the model behind the search form of `app\models\Category`.
  */
-class NavbarSearch extends Navbar
+class CategorySearch extends Category
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class NavbarSearch extends Navbar
      */
     public function search($params)
     {
-        $query = Navbar::find();
+        $query = Category::find();
 
         // add conditions that should always apply here
 

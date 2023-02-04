@@ -4,7 +4,7 @@ namespace frontend\controllers;
 
 use common\models\About;
 use common\models\FeedbackForm;
-use common\models\Navbar;
+use common\models\Category;
 use common\models\Ourfruit;
 use common\models\Testimonial;
 use common\models\Upsetting;
@@ -17,7 +17,7 @@ class ShopController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->feedback(Yii::$app->params['adminEmail'])) {
              $this->refresh();
         }
-        $navbars = Navbar::find()->all();
+        $navbars = Category::find()->all();
         $settings = Upsetting::find()->one();
         $abouts = About::find()->all();
         $fruits = Ourfruit::find()->all();

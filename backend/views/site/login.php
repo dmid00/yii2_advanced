@@ -1,64 +1,53 @@
 <?php
+
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+/**
+ * @var yii\web\View $this
+ * @var dektrium\user\models\LoginForm $model
+ * @var dektrium\user\Module $module
+ */
+
+$this->title = Yii::t('user', 'Sign in');
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="card">
-    <div class="card-body login-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
 
-        <?php $form = \yii\bootstrap4\ActiveForm::begin(['id' => 'login-form']) ?>
-
-        <?= $form->field($model,'username', [
-            'options' => ['class' => 'form-group has-feedback'],
-            'inputTemplate' => '{input}<div class="input-group-append"><div class="input-group-text"><span class="fas fa-envelope"></span></div></div>',
-            'template' => '{beginWrapper}{input}{error}{endWrapper}',
-            'wrapperOptions' => ['class' => 'input-group mb-3']
-        ])
-            ->label(false)
-            ->textInput(['placeholder' => $model->getAttributeLabel('username')]) ?>
-
-        <?= $form->field($model, 'password', [
-            'options' => ['class' => 'form-group has-feedback'],
-            'inputTemplate' => '{input}<div class="input-group-append"><div class="input-group-text"><span class="fas fa-lock"></span></div></div>',
-            'template' => '{beginWrapper}{input}{error}{endWrapper}',
-            'wrapperOptions' => ['class' => 'input-group mb-3']
-        ])
-            ->label(false)
-            ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
-
-        <div class="row">
-            <div class="col-8">
-                <?= $form->field($model, 'rememberMe')->checkbox([
-                    'template' => '<div class="icheck-primary">{input}{label}</div>',
-                    'labelOptions' => [
-                        'class' => ''
-                    ],
-                    'uncheck' => null
-                ]) ?>
-            </div>
-            <div class="col-4">
-                <?= Html::submitButton('Sign In', ['class' => 'btn btn-primary btn-block']) ?>
-            </div>
-        </div>
-
-        <?php \yii\bootstrap4\ActiveForm::end(); ?>
-
-        <div class="social-auth-links text-center mb-3">
-            <p>- OR -</p>
-            <a href="#" class="btn btn-block btn-primary">
-                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-            </a>
-            <a href="#" class="btn btn-block btn-danger">
-                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-            </a>
-        </div>
-        <!-- /.social-auth-links -->
-
-        <p class="mb-1">
-            <a href="forgot-password.html">I forgot my password</a>
-        </p>
-        <p class="mb-0">
-            <a href="register.html" class="text-center">Register a new membership</a>
-        </p>
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
     </div>
-    <!-- /.login-card-body -->
-</div>
+    <div class="panel-body">
+<?php $form = ActiveForm::begin([
+    'id' => 'login-form',
+    'enableAjaxValidation' => true,
+    'enableClientValidation' => false,
+    'validateOnBlur' => false,
+    'validateOnType' => false,
+    'validateOnChange' => false,
+]) ?>
+
+<?= $form->field($model, 'log55in', ['inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control', 'tabindex' => '1']]) ?>
+<?= $form->field($model, 'password', ['inputOptions' => ['class' => 'form-control', 'tabindex' => '2']])->passwordInput()->label(Yii::t('user', 'Password') . ($module->enablePasswordRecovery ? ' (' . Html::a(Yii::t('user', 'Forgot password?'), ['/user/recovery/request'], ['tabindex' => '5']) . ')' : '')) ?>
+<?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '4']) ?>
+
+<?= Html::submitButton(Yii::t('user', 'Sign in'), ['class' => 'btn btn-primary btn-block', 'tabindex' => '3']) ?>
+
+<?php ActiveForm::end(); ?>
+    </div>
+    </div>
+        <?php if ($module->enableConfirmation): ?>
+            <p class="text-center">
+                <?= Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend']) ?>
+            </p>
+        <?php endif ?>
+        <?php if ($module->enableRegistration): ?>
+            <p class="text-center">
+                <?= Html::a(Yii::t('user', 'Don\'t have an account? Sign up!'), ['/user/registration/register']) ?>
+            </p>
+        <?php endif ?>
+    </div>
+    </div>
+

@@ -17,7 +17,7 @@ use yii\helpers\Html;
                 echo Menu::widget([
                     'items' => [
                         ['label' => 'Структура сайта', 'header' => true],
-                        ['label' => 'Панель Навигации', 'iconStyle' => 'far', 'url' => ['/navbar']],
+                        ['label' => 'Панель Навигации', 'iconStyle' => 'far', 'url' => ['/category']],
                         ['label' => 'Информация о компании', 'iconStyle' => 'far', 'url' => ['/about']],
                         ['label' => 'Добавление/Изменение отзывов', 'iconStyle' => 'far', 'url' => ['/testimonial']],
                         ['label' => 'Добавление/Изменение товара', 'iconStyle' => 'far', 'url' => ['/ourfruit']],

@@ -10,9 +10,9 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
 /**
- * NavbarController implements the CRUD actions for Category model.
+ * CategoryController implements the CRUD actions for Category model.
  */
-class NavbarController extends Controller
+class CategoryController extends Controller
 {
     /**
      * @inheritDoc
