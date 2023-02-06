@@ -21,7 +21,7 @@ use yii\helpers\Html;
                         ['label' => 'Информация о компании', 'iconStyle' => 'far', 'url' => ['/about']],
                         ['label' => 'Добавление/Изменение отзывов', 'iconStyle' => 'far', 'url' => ['/testimonial']],
                         ['label' => 'Добавление/Изменение товара', 'iconStyle' => 'far', 'url' => ['/ourfruit']],
-                        ['label' => 'Настройки', 'iconStyle' => 'far', 'url' => ['/upsetting']],
+                        ['label' => 'Настройки', 'iconStyle' => 'far', 'url' => ['/setting']],
                         ['label' => 'Отладка ошибок', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
                     ],
                 ]);

@@ -2,17 +2,17 @@
 
 namespace backend\controllers;
 
-use backend\models\UpsettingSeatch;
-use common\models\Upsetting;
+use backend\models\SettingSeatch;
+use common\models\Setting;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
 /**
- * UpsettingController implements the CRUD actions for upsetting model.
+ * SettingController implements the CRUD actions for setting model.
  */
-class UpsettingController extends Controller
+class SettingController extends Controller
 {
     /**
      * @inheritDoc
@@ -47,13 +47,13 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Lists all upsetting models.
+     * Lists all setting models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new UpsettingSeatch();
+        $searchModel = new SettingSeatch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -63,7 +63,7 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Displays a single upsetting model.
+     * Displays a single setting model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -76,13 +76,13 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Creates a new upsetting model.
+     * Creates a new setting model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Upsetting();
+        $model = new Setting();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -98,7 +98,7 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Updates an existing upsetting model.
+     * Updates an existing setting model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -109,7 +109,7 @@ class UpsettingController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['update', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -118,7 +118,7 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Deletes an existing upsetting model.
+     * Deletes an existing setting model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -132,15 +132,15 @@ class UpsettingController extends Controller
     }
 
     /**
-     * Finds the upsetting model based on its primary key value.
+     * Finds the setting model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Upsetting the loaded model
+     * @return Setting the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Upsetting::findOne(['id' => $id])) !== null) {
+        if (($model = Setting::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

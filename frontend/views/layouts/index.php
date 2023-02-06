@@ -1,13 +1,13 @@
 <?php
 
 use common\models\Category;
-use common\models\Upsetting;
+use common\models\Setting;
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
 
 AppAsset::register($this);
 $navbars = Category::find()->all();
-$settings = Upsetting::find()->one();
+$settings = Setting::find()->one();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var common\models\Upsetting $settings */
+/** @var common\models\setting $settings */
 /** @var FeedbackForm $model */
 /** @var yii\bootstrap5\ActiveForm $form */
 

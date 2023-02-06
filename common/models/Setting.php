@@ -3,7 +3,7 @@
 namespace common\models;
 
 /**
- * This is the model class for table "upsetting".
+ * This is the model class for table "setting".
  *
  * @property int $id
  * @property string $namesite
@@ -19,14 +19,14 @@ namespace common\models;
  * @property string $selection4
  * @property string $selection5
  */
-class Upsetting extends \yii\db\ActiveRecord
+class Setting extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'upsetting';
+        return 'setting';
     }
 
     /**

@@ -2,14 +2,14 @@
 
 namespace backend\models;
 
-use common\models\Upsetting;
+use common\models\Setting;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * UpsettingSeatch represents the model behind the search form of `app\models\upsetting`.
+ * SettingSeatch represents the model behind the search form of `app\models\setting`.
  */
-class UpsettingSeatch extends Upsetting
+class SettingSeatch extends Setting
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class UpsettingSeatch extends Upsetting
      */
     public function search($params)
     {
-        $query = Upsetting::find();
+        $query = Setting::find();
 
         // add conditions that should always apply here
 
