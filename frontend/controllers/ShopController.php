@@ -17,12 +17,12 @@ class ShopController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->feedback(Yii::$app->params['adminEmail'])) {
              $this->refresh();
         }
-        $navbars = Category::find()->all();
+
         $settings = Upsetting::find()->one();
         $abouts = About::find()->all();
         $fruits = Ourfruit::find()->all();
         $testimonialtittle = Testimonial::find()->where(['status' => 1])->all();
         $testimonials = Testimonial::find()->where(['status' => 0])->all();
-        return $this ->render('index', compact('navbars','settings','abouts','fruits', 'testimonialtittle', 'testimonials', 'model'));
+        return $this ->render('index', compact('settings','abouts','fruits', 'testimonialtittle', 'testimonials', 'model'));
     }
 }
