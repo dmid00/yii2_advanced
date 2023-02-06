@@ -9,8 +9,8 @@
 Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
 developing complex Web applications with multiple tiers.
 
-php init
-composer install
-yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations
-yii migrate/up --migrationPath=@yii/rbac/migrations
-yii migrate
+<h1>php init</h1>
+<h1>composer install<h1>
+<h1>yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations</h1>
+<h1>yii migrate/up --migrationPath=@yii/rbac/migrations</h1>
+<h1>yii migrate</h1>
