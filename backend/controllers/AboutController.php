@@ -48,7 +48,7 @@ class AboutController extends Controller
 
     /**
      * Lists all About models.
-     *
+     * @return string|\yii\web\Response
      * @return string
      */
     public function actionIndex()
@@ -56,10 +56,11 @@ class AboutController extends Controller
         $searchModel = new AboutSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+
     }
 
     /**
@@ -109,7 +110,7 @@ class AboutController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
 
         return $this->render('update', [

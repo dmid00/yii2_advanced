@@ -6,6 +6,7 @@ use yii\helpers\Html;
 /** @var backend\models\AboutSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
+
 $this->title = 'Информация о компании';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

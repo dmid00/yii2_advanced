@@ -61,6 +61,29 @@ $this->title = $settings->namesite;
             <?php /** @var common\models\Ourfruit $fruits */
             foreach ($fruits as $fruit): ?>
                 <div class="box">
+                    <?php if(!$title = $fruit->seo->title) {
+                        $title = "Купить {$model->name} в Кургане в магазине «Шоп45»";
+                    }
+
+                    if(!$description = $fruit->seo->description) {
+                        $description = 'Страница '.$fruit->name;
+                    }
+
+                    if(!$keywords = $fruit->seo->keywords) {
+                        $keywords = '';
+                    }
+
+                    $this->title = $title;
+
+                    $this->registerMetaTag([
+                        'name' => 'description',
+                        'content' => $description,
+                    ]);
+
+                    $this->registerMetaTag([
+                        'name' => 'keywords',
+                        'content' => $keywords,
+                    ]); ?>
                     <?= Html::img("@web/$fruit->img") ?>
                     <div class="link_box">
                         <h5> <?= $fruit->name ?> </h5>

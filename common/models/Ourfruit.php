@@ -30,6 +30,15 @@ class Ourfruit extends \yii\db\ActiveRecord
         ];
     }
 
+    function behaviors()
+    {
+        return [
+            'seo' => [
+                'class' => 'dvizh\seo\behaviors\SeoFields',
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */

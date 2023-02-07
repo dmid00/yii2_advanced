@@ -15,7 +15,10 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
+    <?=\dvizh\seo\widgets\SeoForm::widget([
+        'model' => $model,
+        'form' => $form,
+    ]); ?>
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
