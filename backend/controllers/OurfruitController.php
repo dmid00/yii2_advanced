@@ -30,7 +30,7 @@ class OurfruitController extends Controller
                             'allow' => true,
                         ],
                         [
-                            'actions' => ['logout', 'index', 'update', 'create', 'view'],
+                            'actions' => ['logout', 'index', 'update', 'create', 'view','delete'],
                             'allow' => true,
                             'roles' => ['@'],
                         ],

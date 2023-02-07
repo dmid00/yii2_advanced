@@ -23,9 +23,6 @@ return [
         'user' => [
             'class' => Module::class,
             'admins' => ['admin'],
-            /*'modelMap' => [
-                'LoginForm' => 'app\common\models\LoginForm'
-            ],*/
         ],
     ],
 ];

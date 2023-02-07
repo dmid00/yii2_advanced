@@ -10,8 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'layout' => 'index',
-    'language' => 'ru',
+
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -39,6 +38,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'shop/index',
+                '/product' => 'shop/view',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
