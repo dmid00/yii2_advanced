@@ -10,4 +10,5 @@
 <p>composer install
 <p>yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations
 <p>yii migrate/up --migrationPath=@yii/rbac/migrations
+<p>yii migrate --migrationPath=vendor/dvizh/yii2-seo/src/migrations
 <p>yii migrate
