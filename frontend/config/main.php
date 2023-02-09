@@ -10,7 +10,6 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -31,7 +30,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'shop/error',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -39,6 +38,7 @@ return [
             'rules' => [
                 '' => 'shop/index',
                 '/product' => 'shop/view',
+                '/404' => 'shop/error',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

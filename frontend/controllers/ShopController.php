@@ -54,4 +54,10 @@ class ShopController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionError()
+    {
+        $exception = Yii::$app->errorHandler->exception;
+        return $this->render('error', ['exception' => $exception]);
+    }
 }
