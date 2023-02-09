@@ -4,10 +4,13 @@ namespace backend\controllers;
 
 use backend\models\AboutSearch;
 use common\models\About;
+use common\models\ImageUpload;
+use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 /**
  * AboutController implements the CRUD actions for About model.
@@ -86,6 +89,7 @@ class AboutController extends Controller
         $model = new About();
 
         if ($this->request->isPost) {
+
             if ($model->load($this->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -147,6 +151,7 @@ class AboutController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
 
 
 }

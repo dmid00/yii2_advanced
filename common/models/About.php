@@ -26,9 +26,9 @@ class About extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['img', 'tittle'], 'required'],
+            [['tittle'], 'required'],
             [['description'], 'string'],
-            [['img', 'tittle'], 'string', 'max' => 255],
+            [['img','tittle'], 'string', 'max' => 255],
         ];
     }
 
@@ -39,9 +39,11 @@ class About extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'img' => 'Путь к файлу изображения',
+            'img' => 'Изображение',
             'tittle' => 'Заголовок',
             'description' => 'Описание',
         ];
     }
+
+
 }
