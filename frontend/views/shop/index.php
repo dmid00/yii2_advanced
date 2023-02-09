@@ -41,7 +41,7 @@ $this->title = $settings->namesite;
                             <h2><?= $about->tittle ?></h2>
                         </div>
                         <p><?= $about->description ?></p>
-                        <a href="<?= Url::to(['url', 'id' =>$about->id]) ?>">Read More</a>
+                        <a href="<?= Url::to(['/contact']) ?>">Read More</a>
                     </div>
                 </div>
             <?php endforeach; ?>
