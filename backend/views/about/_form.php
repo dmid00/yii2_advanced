@@ -1,15 +1,15 @@
 <?php
 
-use kartik\widgets\FileInput;
+use common\models\About;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var \common\models\About $model */
+/** @var About $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
-<div class="about-form">
+<div class="container">
 
     <?php $form = ActiveForm::begin([
             'options' => ['enctype' => 'multipart/form-data'],
@@ -19,12 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'file')->fileInput() ?>
+    <?= $form->field($model, 'img')->textInput(['disabled' => true]) ?>
+
+    <?= $form->field($model, 'file_about')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
-
 </div>
