@@ -3,6 +3,7 @@
 use common\models\About;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
 /** @var About $model */
@@ -19,7 +20,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'img')->textInput(['disabled' => true]) ?>
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'img',
+            [
+                'label' => '',
+                'attribute' => 'ImagesPreview',
+                'format' => ['image',['width'=>'300']],
+            ],
+        ],
+    ]) ?>
 
     <?= $form->field($model, 'file_about')->fileInput() ?>
 

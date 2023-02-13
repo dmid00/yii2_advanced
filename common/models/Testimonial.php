@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use yii\helpers\Url;
 use Yii;
 use yii\web\UploadedFile;
 
@@ -53,6 +54,13 @@ class Testimonial extends \yii\db\ActiveRecord
             'description' => 'Описание',
             'status' => 'Первый в карусели (1/0)',
         ];
+    }
+
+    public function getImagesPreview()
+    {
+        $dir = str_replace('admin','',Url::home(true)).'frontend/web/';
+        return $dir.$this->img;
+
     }
 
     public function beforeSave($insert)

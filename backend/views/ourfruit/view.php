@@ -28,8 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'img',
             'name',
+            'img',
+            [
+                'label' => '',
+                'attribute' => 'ImagesPreview',
+                'format' => ['image',['width'=>'300']],
+            ],
         ],
     ]) ?>
 

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\Url;
 use yii\web\UploadedFile;
 
 /**
@@ -49,6 +50,13 @@ class About extends \yii\db\ActiveRecord
             'tittle' => 'Заголовок',
             'description' => 'Описание',
         ];
+    }
+
+    public function getImagesPreview()
+    {
+        $dir = str_replace('admin','',Url::home(true)).'frontend/web/';
+        return $dir.$this->img;
+
     }
 
     public function beforeSave($insert)

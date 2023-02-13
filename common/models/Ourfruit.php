@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\Url;
 use yii\web\UploadedFile;
 
 /**
@@ -55,6 +56,13 @@ class Ourfruit extends \yii\db\ActiveRecord
             'img' => 'Изображение',
             'name' => 'Название товара',
         ];
+    }
+
+    public function getImagesPreview()
+    {
+        $dir = str_replace('admin','',Url::home(true)).'frontend/web/';
+        return $dir.$this->img;
+
     }
 
     public function beforeSave($insert)

@@ -22,7 +22,8 @@
         "dektrium/yii2-rbac": "1.0.0-alpha@dev",
         "hail812/yii2-adminlte3": "~1.1",
         "kartik-v/yii2-widgets": "dev-master",
-        "dvizh/yii2-seo": "@dev"
+        "dvizh/yii2-seo": "@dev",
+      "ext-http": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

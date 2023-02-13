@@ -9,6 +9,7 @@ use yii\widgets\DetailView;
 $this->title = 'Отзыв ' .$model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Testimonials', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$dir = Yii::getAlias('@frontend/web/');
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="testimonial-view">
@@ -28,11 +29,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'img',
             'name',
             'title',
             'description:ntext',
             'status',
+            'img',
+            [
+                'label' => '',
+                'attribute' => 'ImagesPreview',
+                'format' => ['image',['width'=>'300']],
+            ],
         ],
     ]) ?>
 
