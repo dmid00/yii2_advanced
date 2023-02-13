@@ -38,6 +38,7 @@ return [
             'rules' => [
                 '' => 'shop/index',
                 '/product' => 'shop/view',
+                '/gallerey' => 'shop/gallerey',
                 '/404' => 'shop/error',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],

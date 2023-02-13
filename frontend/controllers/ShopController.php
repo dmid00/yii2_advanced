@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use common\models\About;
 use common\models\FeedbackForm;
+use common\models\Gallerey;
 use common\models\Ourfruit;
 use common\models\Testimonial;
 use common\models\Setting;
@@ -60,4 +61,11 @@ class ShopController extends Controller
         $exception = Yii::$app->errorHandler->exception;
         return $this->render('error', ['exception' => $exception]);
     }
+
+    public function actionGallerey()
+    {
+        $images_gallerey = Gallerey::find()->all();
+        return $this->render('gallerey', compact('images_gallerey'));
+    }
+
 }
